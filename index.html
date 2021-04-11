@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Крестики-нолики</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="game">
+    <div class="table">
+      <div class="block" id="0" onclick="play(0, 'x')"></div>
+      <div class="block" id="1" onclick="play(1, 'x')"></div>
+      <div class="block" id="2" onclick="play(2, 'x')"></div>
+      <div class="block" id="3" onclick="play(3, 'x')"></div>
+      <div class="block" id="4" onclick="play(4, 'x')"></div>
+      <div class="block" id="5" onclick="play(5, 'x')"></div>
+      <div class="block" id="6" onclick="play(6, 'x')"></div>
+      <div class="block" id="7" onclick="play(7, 'x')"></div>
+      <div class="block" id="8" onclick="play(8, 'x')"></div>
+    </div>
+    <button class="button" onclick="reload()">Сыграть ещё!</button>
+    <p id="info" class="info"></p>
+  </div>
+
+  <script type="text/javascript" src="index.js" ></script>
+</body>
+</html>
