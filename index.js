@@ -1,10 +1,19 @@
 const arr = new Array(9);
 
 const play = (id, player) => {
-	if (document.getElementById('info').innerHTML == 'Победили крестики!' || document.getElementById('info').innerHTML == 'Победили нолики!' ||document.getElementById('info').innerHTML == 'Победила дружба!!') return false;
+	if (
+		document.getElementById('info').innerHTML == 'Победили крестики!' ||
+		document.getElementById('info').innerHTML == 'Победили нолики!' ||
+		document.getElementById('info').innerHTML == 'Победила дружба!!'
+	)
+		return false;
 	if (arr[id]) return false;
 	arr[id] = player;
-	document.getElementById(id).innerHTML = player;
+	if (player === '0') {
+		setTimeout(() => (document.getElementById(id).innerHTML = player), 500);
+	} else {
+		document.getElementById(id).innerHTML = player;
+	}
 	if (!winner()) {
 		player === 'x' ? autoPlayer() : null;
 	} else {
@@ -20,15 +29,12 @@ const autoPlayer = () => {
 const reset = (player) => {
 	if (player === 'xtrue') {
 		document.getElementById('info').innerHTML = 'Победили крестики!';
-       
 	}
 	if (player === '0true') {
 		document.getElementById('info').innerHTML = 'Победили нолики!';
-     
 	}
 	if (player === 'ntrue') {
 		document.getElementById('info').innerHTML = 'Победила дружба!!';
-       
 	}
 };
 
